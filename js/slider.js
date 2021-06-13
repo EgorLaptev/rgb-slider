@@ -16,3 +16,17 @@ let colorBg     = document.getElementById('color-bg'),
 
 });
 
+/* Copy color code */
+let colorCodeText = document.createElement('input');
+
+colorCode.addEventListener('click', ev => {
+
+    colorCodeText.value = colorCode.textContent;
+    colorCodeText.style.opacity = '0';
+    colorCodeText.style.position = 'absolute';g
+    document.body.appendChild(colorCodeText);
+
+    colorCodeText.select();
+    document.execCommand("copy");
+
+});
